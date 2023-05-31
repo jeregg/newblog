@@ -21,11 +21,12 @@ export default function Home({ posts }) {
             const date = new Date(post.last_edited_time).toLocaleString(
               "en-US",
               {
+                weekday: "short",
                 month: "short",
                 day: "2-digit",
                 year: "numeric",
               }
-            );
+            ).replace(/,/g, "");;
             return (
               <li key={post.id} className="my-3 flex flex-col justify-between md:flex-row">
                 <h3 className="text-lg font-bold underline-offset-8 hover:underline transition duration-500">
