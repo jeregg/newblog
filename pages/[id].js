@@ -208,7 +208,7 @@ export default function Post({ page, blocks }) {
     return <div />;
   }
   return (
-    <div>
+    <div className="justify-center px-4">
       <Head>
         <title>{page.properties.Name.title[0].plain_text}</title>
         <link rel="icon" href="/favicon.ico" />
