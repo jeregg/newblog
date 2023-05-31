@@ -14,7 +14,7 @@ export default function Home({ posts }) {
         <title>plsfix</title>
         <link rel="icon" href="./favicon.png" />
       </Head>
-      <div className="justify-center">
+      <div className="justify-center px-4">
       <Header />
         <ol className="">
           {posts.map((post) => {
@@ -27,7 +27,7 @@ export default function Home({ posts }) {
               }
             );
             return (
-              <li key={post.id} className="my-3 flex flex-col justify-between items-center md:flex-row">
+              <li key={post.id} className="my-3 flex flex-col justify-between md:flex-row">
                 <h3 className="text-lg font-bold underline-offset-8 hover:underline transition duration-500">
                   <Link href={`/${post.id}`}>
                     <Text text={post.properties.Name.title} />
