@@ -68,7 +68,13 @@ a {
 }
 
 h1,h2,h3,p {
-  @apply leading-7
+  @apply leading-7;
+}
+
+p {
+  font-size: 0.95rem;
+  line-height: 1.6rem;
+
 }
 
 hr {
@@ -76,4 +82,9 @@ hr {
   background-color: black;
   opacity: 0.1;
   border: none;
+}
+
+::selection {
+  background-color: #0070f3;
+  color: #fff;
 }
