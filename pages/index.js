@@ -2,47 +2,36 @@ import Head from "next/head";
 import Link from "next/link";
 import { getDatabase } from "../lib/notion";
 import { Text } from "./[id].js";
-import Header from "../components/header";
-import Footer from "../components/footer";
+import Layout from '../components/layout';
 
 export const databaseId = process.env.NOTION_DATABASE_ID;
 
 export default function Home({ posts }) {
+  const sortedPosts = posts.sort((a, b) => {
+    const dateA = new Date(a.properties.Date.date.start);
+    const dateB = new Date(b.properties.Date.date.start);
+    return dateB - dateA;
+  });
   return (
-    <div>
-      <Head>
-        <title>plsfix</title>
-        <link rel="icon" href="./favicon.png" />
-      </Head>
-      <div className="justify-center px-4">
-      <Header />
-        <ol className="">
-          {posts.map((post) => {
-            const date = new Date(post.last_edited_time).toLocaleString(
-              "en-US",
-              {
-                weekday: "short",
-                month: "short",
-                day: "2-digit",
-                year: "numeric",
-              }
-            ).replace(/,/g, "");;
+    <Layout>
+      <ol className="">
+          {sortedPosts.map((post) => {
             return (
-              <li key={post.id} className="my-3 flex flex-col justify-between md:flex-row">
-                <h3 className="text-lg font-bold underline-offset-8 hover:underline transition duration-500">
+              <div className="blog_post">
+              <li key={post.id} className="post_title">
+                <h3 className="post_title_name">
                   <Link href={`/${post.id}`}>
                     <Text text={post.properties.Name.title} />
                   </Link>
                 </h3>
-
-                <p className="flex-shrink-0 align-middle text-sm">{date}</p>
+                <p className="post_title_date">{post.properties.Date.date.start}</p>
               </li>
+              <p className="post_summary">{post.properties.Summary.rich_text[0].plain_text} </p>
+              </div>
             );
           })}
-        </ol>
-        <Footer />
-      </div>
-    </div>
+        </ol>    
+    </Layout>
   );
 }
 

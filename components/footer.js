@@ -2,8 +2,8 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <div className="mt-10 w-full">
-        <p className="flex text-sm font-semibold justify-center">© PLSFIX 2023</p>
+    <div className="footer_setting">
+        <p className="text-sm font-semibold text-center">© PLSFIX 2023</p>
     </div>
   );
 };

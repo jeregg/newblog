@@ -4,22 +4,24 @@ import Image from 'next/image';
 
 const Header = () => {
   return (
-    <div className="mb-6">
-    <div className="group m-auto w-full h-6 flex flex-row justify-between items-center">
-    <Link href="/">
-      <Image
-        src='/favicon.png'
-        width={24}
-        height={24}
-      />
-    </Link>
-        <ul className="flex flex-row">
-            <li className="ml-4 uppercase text-sm font-semibold underline-offset-8 hover:underline transition duration-100"><Link href='./'>Post</Link></li>
-            <li className="ml-4 uppercase text-sm font-semibold underline-offset-8 hover:underline transition duration-100"><Link href='./about'>About</Link></li>
+    <div className="lg:sticky lg:top-20">
+      <div className="mb-2 px-4 md:px-0 md:mb-8 space-y-10 flex flex-col md:flex-row items-start ">
+        <Link href="/">
+        <Image
+          src='/favicon.png'
+          width={48}
+          height={48}
+        />
+        </Link>
+      </div>
+      <div className="flex flex-row md:flex-col items-start relative px-4 mt-0 md:mt-6 md:px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative">
+        <ul className="flex flex-row md:flex-col space-x-2 md:space-x-0 pl-1 pr-10 mb-2 mt-2 md:mt-0">
+            <li className="my-2 transition-all hover:text-neutral-900 dark:hover:text-neutral-200 flex align-middle text-neutral-500"><Link href='./'>home</Link></li>
+            <li className="my-2 transition-all hover:text-neutral-900 dark:hover:text-neutral-200 flex align-middle text-neutral-500"><Link href='./'>post</Link></li>
+            <li className="my-2 transition-all hover:text-neutral-900 dark:hover:text-neutral-200 flex align-middle text-neutral-500"><Link href='./about'>about</Link></li>
         </ul>
+      </div>
     </div>
-    </div>
-
   );
 };
 

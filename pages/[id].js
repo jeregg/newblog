@@ -4,8 +4,7 @@ import { getDatabase, getPage, getBlocks } from "../lib/notion";
 import Link from "next/link";
 import { databaseId } from "./index.js";
 import styles from "./post.module.css";
-import Header from "../components/header";
-import Footer from "../components/footer";
+import Layout from "../components/layout"
 
 export const Text = ({ text }) => {
   if (!text) {
@@ -208,13 +207,11 @@ export default function Post({ page, blocks }) {
     return <div />;
   }
   return (
-    <div className="justify-center px-4">
+    <Layout>
       <Head>
         <title>{page.properties.Name.title[0].plain_text}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header></Header>
-
       <article className={styles.notion}>
         <h1 className={styles.name}>
           <Text text={page.properties.Name.title} />
@@ -225,8 +222,7 @@ export default function Post({ page, blocks }) {
           ))}
         </section>
       </article>
-      <Footer></Footer>
-    </div>
+    </Layout>
   );
 }
 

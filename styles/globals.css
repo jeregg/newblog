@@ -18,10 +18,43 @@
   font-named-instance: 'Italic';
 }
 
+.main_screen {
+  @apply justify-center px-4 max-w-3xl my-6 mx-auto;;
+  font-family: "Inter Var";
+}
+
+.header_setting {
+  @apply mb-8 w-full;
+}
+
+.footer_setting {
+  @apply mt-10 mb-8 w-full; 
+}
+
+.blog_post {
+  @apply my-4;
+}
+
+.post_title {
+  @apply flex flex-col my-1 justify-between md:flex-row md:items-center;
+}
+
+.post_title_name {
+  @apply  text-lg font-bold underline-offset-4 transition-all hover:underline;
+}
+
+.post_title_date {
+  @apply flex-shrink-0 align-middle text-sm text-neutral-600;
+}
+
+.post_summary {
+  @apply text-sm text-neutral-600;
+}
+
 html,
 body {
   @apply my-6 mx-auto;
-  font-family: "Inter var", Helvetica Neue, sans-serif;
+  font-family: "Inter var", "Helvetica Neue", sans-serif;
   @apply max-w-3xl;
 }
 
