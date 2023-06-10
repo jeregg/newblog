@@ -32,7 +32,7 @@
 }
 
 .blog_post {
-  @apply my-6;
+  @apply my-4;
 }
 
 .post_title {
@@ -40,7 +40,7 @@
 }
 
 .post_title_name {
-  @apply  text-lg font-extrabold underline-offset-4 transition-all hover:text-blue-600;
+  @apply  text-xl font-extrabold underline-offset-4 transition-all hover:text-blue-600;
 }
 
 .post_title_date {

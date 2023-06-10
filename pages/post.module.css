@@ -10,7 +10,7 @@
   }
 
   .notion h1 {
-    @apply text-3xl font-bold mt-4 mb-2;
+    @apply text-3xl font-black mt-4 mb-2;
   }
 
   .notion h2 {
