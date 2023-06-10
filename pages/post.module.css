@@ -5,6 +5,10 @@
   font-size: .9375em;
   }
 
+  .notion p {
+    @apply my-4;
+  }
+
   .notion h1 {
     @apply text-3xl font-bold mt-4 mb-2;
   }
@@ -20,15 +24,18 @@
   .notion img {
     width: 100%;
     height: auto;
+    @apply my-2;
   }
   
   .notion figure {
     margin-left: 0;
     margin-right: 0;
+    @apply my-2;
   }
   
   .notion figcaption {
     opacity: 0.6;
+    @apply my-2;
   }
   
   .notion li {
@@ -53,7 +60,7 @@
   }
   
   .bold {
-    @apply font-semibold;
+    @apply font-bold;
   }
   
   .code {
@@ -61,6 +68,7 @@
     background-color: rgb(242, 242, 242);
     padding: 2px 4px;
     border-radius: 2px;
+    @apply my-2;
   }
   
   .italic {
@@ -115,6 +123,7 @@
   .table {
     border: 1px solid currentColor;
     border-collapse: collapse;
+    @apply my-2;
   }
   .table th {
     border: 1px solid currentColor;
