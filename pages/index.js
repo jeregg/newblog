@@ -4,6 +4,7 @@ import { getDatabase } from "../lib/notion";
 import { Text } from "./[id].js";
 import Layout from '../components/layout';
 
+
 export const databaseId = process.env.NOTION_DATABASE_ID;
 
 export default function Home({ posts }) {
@@ -14,19 +15,19 @@ export default function Home({ posts }) {
   });
   return (
     <Layout>
-      <ol className="">
+      <ol>
           {sortedPosts.map((post) => {
             return (
-              <div className="blog_post">
-              <li key={post.id} className="post_title">
-                <h3 className="post_title_name">
+              <div className="flex flex-col space-y-1 mb-4">
+              <li key={post.id}>
+                <h3 className="text-lg font-bold text-neutral-900 dark:text-neutral-100 tracking-tight">
                   <Link href={`/${post.id}`}>
                     <Text text={post.properties.Name.title} />
                   </Link>
                 </h3>
-                <p className="post_title_date">{post.properties.Date.date.start}</p>
+                <p className="text-neutral-600 dark:text-neutral-400">{post.properties.Date.date.start}</p>
               </li>
-              <p className="post_summary">{post.properties.Summary.rich_text[0].plain_text} </p>
+              <p className="text-neutral-600 dark:text-neutral-400">{post.properties.Summary.rich_text[0].plain_text} </p>
               </div>
             );
           })}
