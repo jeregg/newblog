@@ -25,9 +25,9 @@ export default function Home({ posts }) {
                     <Text text={post.properties.Name.title} />
                   </Link>
                 </h3>
-                <p className="text-neutral-600 dark:text-neutral-400">{post.properties.Date.date.start}</p>
+                <p className="text-neutral-600 dark:text-neutral-400 my-1">{post.properties.Date.date.start}</p>
+              <p className="text-neutral-600 dark:text-neutral-400 my-1">{post.properties.Summary.rich_text[0].plain_text} </p>
               </li>
-              <p className="text-neutral-600 dark:text-neutral-400">{post.properties.Summary.rich_text[0].plain_text} </p>
               </div>
             );
           })}
