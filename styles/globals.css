@@ -53,9 +53,7 @@
 */
 html,
 body {
-  @apply my-6 mx-auto;
   font-family: "Inter var", "Helvetica Neue", sans-serif;
-  @apply max-w-3xl;
 }
 
 a {
