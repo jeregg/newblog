@@ -9,6 +9,10 @@
     @apply my-4 text-neutral-700 dark:text-neutral-300;
   }
 
+  .notion a {
+    @apply text-blue-600;
+  }
+  
   .notion h1 {
     @apply text-2xl font-black mt-4 mb-2;
   }
@@ -42,12 +46,24 @@
     padding-inline-start: 4px;
     }
   
+  .notion ol span {
+    @apply my-4 text-neutral-700 dark:text-neutral-300;
+  }
+  .notion ol {
+    @apply text-neutral-400;
+  }
   .notion ol {
     list-style-type: decimal;
     padding-inline-start: 30px;
     line-height: 1.6rem;
   }
 
+  .notion ul span {
+    @apply my-4 text-neutral-700 dark:text-neutral-300;
+  }
+  .notion ul {
+    @apply text-neutral-400;
+  }
   .notion ul {
     list-style-type: disc;
     padding-inline-start: 30px;
