@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
 @font-face {
   font-family: 'Inter var';
   font-style: normal;
@@ -18,7 +17,7 @@
   src: url(/fonts/Inter-italic.latin.var.woff2) format('woff2');
   font-named-instance: 'Italic';
 }
-
+/*
 .main_screen {
   @apply justify-center px-4 max-w-3xl my-6 mx-auto;;
   font-family: "Inter Var";
@@ -51,7 +50,7 @@
 .post_summary {
   @apply text-sm text-neutral-600;
 }
-
+*/
 html,
 body {
   @apply my-6 mx-auto;
@@ -63,7 +62,7 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
+/*
 * {
   box-sizing: border-box;
 }
