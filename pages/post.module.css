@@ -6,11 +6,11 @@
   }
 
   .notion p {
-    @apply my-4;
+    @apply my-4 text-neutral-700 dark:text-neutral-300;
   }
 
   .notion h1 {
-    @apply text-3xl font-black mt-4 mb-2;
+    @apply text-2xl font-black mt-4 mb-2;
   }
 
   .notion h2 {
