@@ -24,7 +24,7 @@ export default function Navbar() {
   }
 
   return (
-    <aside className="-ml-[8px] mb-16 tracking-tight">
+    <aside className="-ml-[8px] mb-12 tracking-tight">
       <div className="lg:sticky lg:top-20">
         <LayoutGroup>
           <nav
